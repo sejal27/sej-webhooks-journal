@@ -1,0 +1,43 @@
+{
+  "name": "journal-util",
+  "version": "1.0.0",
+  "description": "A TypeScript CLI utility for testing the HubSpot Webhooks Journal API",
+  "main": "dist/index.js",
+  "bin": {
+    "journal-util": "dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "ts-node src/index.ts",
+    "watch": "nodemon --exec ts-node src/index.ts",
+    "test-auth": "ts-node src/utils/test-auth.ts",
+    "stream": "ts-node src/commands/stream.ts",
+    "clean": "rm -rf dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://git.hubteam.com/djacobson/journal-util.git"
+  },
+  "keywords": [
+    "hubspot",
+    "api",
+    "cli",
+    "webhooks",
+    "journal"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.6.2",
+    "dotenv": "^16.3.1",
+    "inquirer": "^9.3.7"
+  },
+  "devDependencies": {
+    "@types/inquirer": "^9.0.7",
+    "@types/node": "^20.10.4",
+    "nodemon": "^3.0.2",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.3.3"
+  }
+}
